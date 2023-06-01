@@ -7,10 +7,12 @@ interface Props extends
     children: ReactNode
   }  
 
-const Text: FC<Props> = ({ intent, fullWidth, ...props }) => {
+const Text: FC<Props> = ({ intent, uppercase, size, italic,
+  bold, ...props }) => {
   return (
     <div
-      className={textStyles({ intent, fullWidth })}
+      className={textStyles({ intent, uppercase, size, italic,
+      bold })}
     >
       {props.children}
     </div>

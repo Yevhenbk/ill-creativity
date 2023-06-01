@@ -1,17 +1,30 @@
 import { cva } from 'class-variance-authority'
 
 export const textStyles = cva(
-  ['text-xl'],
+  ['p-0 m-0'],
   {
     variants: {
       intent: {
-        primary: 'text-[#57A6CA]',
-        secondary: 'text-pink-700',
+        primary: 'text-white',
+        secondary: 'text-[#909090]',
         teritary: 'text-white',
         quaternary: 'text-[#FE7F5F]'
       },
-      fullWidth: {
-        true: 'w-[100%]'
+      uppercase: {
+        true: 'uppercase'
+      },
+      italic: {
+        true: 'italic'
+      },
+      bold: {
+        true: 'font-bold'
+      },
+      size: {
+        extrasmall: 'text-xs',
+        small: 'text-sm',
+        medium: 'text-md',
+        large: 'text-lg',
+        extralarge: 'text-xl',
       }  
     },
     defaultVariants: {

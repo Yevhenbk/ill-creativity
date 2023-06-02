@@ -13,7 +13,7 @@ interface Props {}
 
 const Home: FC<Props> = ({}) => {
   return (
-    <main>
+    <main className='h-[120rem]'>
       <Navbar>
         <div className='flex flex-row justify-around
         w-[25rem] items-center'>
@@ -41,7 +41,7 @@ const Home: FC<Props> = ({}) => {
         </div>
       </Navbar>
       <div className='bg-black h-[2.4rem] flex justify-center items-center
-      relative top-20'>
+      relative top-20 z-10'>
         <Text intent='primary' size='extrasmall'>
           <p>Free shipping over €100</p>
         </Text>

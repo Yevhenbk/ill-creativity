@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import Text from '@atoms/Text'
 import Navbar from '@organisms/Navbar'
+import Slider from '@organisms/Slider'
 import Link from 'next/link'
 import { 
   menuItems, Props as MenuItemsProps 
@@ -8,12 +9,13 @@ import {
 import { 
   AiOutlineShopping, AiOutlineSearch
  } from 'react-icons/ai'
+import example from '../../public/linearBackground.jpg'
 
 interface Props {}
 
 const Home: FC<Props> = ({}) => {
   return (
-    <main className='h-[120rem]'>
+    <main>
       <Navbar>
         <div className='flex flex-row justify-around
         w-[25rem] items-center'>
@@ -35,7 +37,8 @@ const Home: FC<Props> = ({}) => {
         w-[15rem] items-center'>
           <Link href='/support'>
             <Text intent='secondary' size='extrasmall'>
-              <p className='hover:text-white duration-150'>Support</p>
+              <p className='hover:text-white duration-150
+              underline-on-hover'>Support</p>
             </Text>
           </Link>
           <AiOutlineSearch className='text-[1.75rem] text-white' />
@@ -47,6 +50,9 @@ const Home: FC<Props> = ({}) => {
         <Text intent='primary' size='extrasmall'>
           <p>Free shipping over €100</p>
         </Text>
+      </div>
+      <div className='relative top-20'>
+        <Slider />
       </div>
     </main>
   )

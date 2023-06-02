@@ -7,7 +7,7 @@ export const textStyles = cva(
       intent: {
         primary: 'text-white',
         secondary: 'text-[#909090]',
-        teritary: 'text-white',
+        teritary: 'text-black',
         quaternary: 'text-[#FE7F5F]'
       },
       uppercase: {
@@ -25,6 +25,7 @@ export const textStyles = cva(
         medium: 'text-md',
         large: 'text-lg',
         extralarge: 'text-xl',
+        header: 'text-5xl'
       }  
     },
     defaultVariants: {

@@ -6,7 +6,7 @@ interface Props {
 const Navbar: FC<Props> = (props) => {
   return (
     <div
-      className='w-[100%] h-20 bg-black border-b-[1px]
+      className='w-[100%] h-20 bg-black border-b-[1px] fixed
       border-[#2c2c2d] flex flex-row justify-around items-center'
     >
       {props.children}

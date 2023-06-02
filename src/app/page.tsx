@@ -18,7 +18,7 @@ const Home: FC<Props> = ({}) => {
             <h2>/ Logo</h2>
           </Text>
           {menuItems.map((item: MenuItemsProps) => (
-            <Text intent='primary' uppercase={true} size='small'>
+            <Text intent='primary' uppercase={true} size='extrasmall'>
               <p>{item.name}</p>
             </Text>
           ))}
@@ -28,10 +28,10 @@ const Home: FC<Props> = ({}) => {
           <Text intent='secondary' size='extrasmall'>
             <p>Support</p>
           </Text>
-          <Text intent='primary' size='small'>
+          <Text intent='primary' size='extrasmall'>
             <p>Icon one</p>
           </Text>
-          <Text intent='primary' size='small'>
+          <Text intent='primary' size='extrasmall'>
             <p>Icon two</p>
           </Text>
         </div>

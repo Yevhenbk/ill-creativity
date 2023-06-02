@@ -33,9 +33,11 @@ const Home: FC<Props> = ({}) => {
         </div> 
         <div className='flex flex-row justify-around
         w-[15rem] items-center'>
-          <Text intent='secondary' size='extrasmall'>
-            <p>Support</p>
-          </Text>
+          <Link href='/support'>
+            <Text intent='secondary' size='extrasmall'>
+              <p className='hover:text-white duration-150'>Support</p>
+            </Text>
+          </Link>
           <AiOutlineSearch className='text-[1.75rem] text-white' />
           <AiOutlineShopping className='text-[1.75rem] text-white' />
         </div>

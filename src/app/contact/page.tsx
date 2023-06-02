@@ -2,12 +2,12 @@ import React, { FC } from "react"
 
 interface Props {}
 
-const Shop: FC<Props> = ({}) => {
+const Contact: FC<Props> = ({}) => {
   return (
     <main className="text-black">
-      Shop
+      Contact
     </main>
   )
 }
 
-export default Shop
+export default Contact

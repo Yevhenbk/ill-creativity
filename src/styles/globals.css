@@ -9,3 +9,27 @@
 body {
   background-color: rgb(var(--foreground-rgb));
 }
+
+.underline-on-hover {
+  position: relative;
+}
+
+.underline-on-hover::before {
+  content: '';
+  position: absolute;
+  top: 1.35rem;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.underline-on-hover:hover::before {
+  background-color: #909090;
+}
+
+
+
+
+

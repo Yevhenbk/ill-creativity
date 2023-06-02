@@ -26,7 +26,7 @@ const Home: FC<Props> = ({}) => {
           {menuItems.map((item: MenuItemsProps) => (
             <Link href={item.title}>
               <Text intent='primary' uppercase={true} size='extrasmall'>
-                <p>{item.name}</p>
+                <p className='underline-on-hover'>{item.name}</p>
               </Text>
             </Link>
           ))}

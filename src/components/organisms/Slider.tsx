@@ -30,8 +30,9 @@ const Slider: FC<Props> = () => {
           </Button>
         </div>
       </div>  
-      <div className='w-[50vw]'>
-        <Image src={noimage} alt='noimage' className='w-[100%] object-cover' />
+      <div className='w-[50vw] h-[45rem]'>
+        <Image src={noimage} alt='noimage' className='w-[100%] h-[100%] 
+        object-cover' />
       </div>  
     </div>
   )

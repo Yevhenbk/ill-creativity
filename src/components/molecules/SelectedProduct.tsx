@@ -14,9 +14,9 @@ const SelectedProduct: FC<Props> = (props) => {
   return (
     <div className='h-[20rem] flex flex-col items-center
     justify-center overflow-hidden'>
-      <Image src={props.image} alt={props.alt} className='w-[100%]
-      object-cover' />  
-      <div className='h-0 relative -top-[15rem] text-center'>
+      <Image src={props.image} alt={props.alt} className='w-[100%] 
+      h-[100%] object-cover' />  
+      <div className='h-0 relative bottom-[8rem] text-center'>
         <Text intent='teritary' uppercase={true} size='large'
         bold={true}>
           {props.title}

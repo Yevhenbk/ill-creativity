@@ -1,11 +1,12 @@
-import React, { FC } from "react"
+import React, { FC } from 'react'
+import Navbarmenu from '@organisms/Navbarmenu'
 
 interface Props {}
 
 const Shop: FC<Props> = ({}) => {
   return (
-    <main className="text-black">
-      Shop
+    <main>
+      <Navbarmenu />
     </main>
   )
 }

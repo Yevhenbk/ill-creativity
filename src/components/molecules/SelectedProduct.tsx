@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
-import Image from 'next/image'
 import Text from '@atoms/Text'
+import Image from 'next/image'
 
 interface Props {
   image: any,
@@ -12,7 +12,7 @@ interface Props {
 
 const SelectedProduct: FC<Props> = (props) => {
   return (
-    <div className='h-[20rem] flex flex-col items-center
+    <div className='h-[30rem] flex flex-col items-center
     justify-center overflow-hidden'>
       <Image src={props.image} alt={props.alt} className='w-[100%] 
       h-[100%] object-cover' />  

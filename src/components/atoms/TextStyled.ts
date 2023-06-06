@@ -8,7 +8,6 @@ export const textStyles = cva(
         primary: 'text-white',
         secondary: 'text-[#909090]',
         teritary: 'text-black',
-        quaternary: 'text-[#FE7F5F]'
       },
       uppercase: {
         true: 'uppercase'
@@ -25,7 +24,9 @@ export const textStyles = cva(
         medium: 'text-md',
         large: 'text-lg',
         extralarge: 'text-xl',
-        header: 'text-5xl'
+        header: 'text-5xl',
+        secondaryHeader: 'text-2xl',
+        teritaryHeader: 'text-4xl'
       }  
     },
     defaultVariants: {

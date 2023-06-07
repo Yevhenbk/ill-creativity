@@ -10,20 +10,21 @@ interface Props {}
 
 const ProductsDescription: FC<Props> = ({}) => {
   return (
-    <div className='h-[50rem] flex flex-row justify-around
+    <div className='h-[40rem] flex flex-row justify-around
     items-center bg-black relative'>
-      <Image src={noimage} alt='Product' className='w-[50vw]
-      h-[50rem] object-cover' />
-      <div className='w-[50vw] flex flex-col items-center'>
+      <Image src={noimage} alt='Product' className='w-[100vw]
+      h-[40rem] object-cover' />
+      <div className='w-[50vw] flex flex-col items-center absolute
+      right-0'>
         <div className='w-[30rem] flex flex-col gap-12 text-left
         items-start'>
-          <Text intent='primary' uppercase={true} bold={true}
+          <Text intent='teritary' uppercase={true} bold={true}
           size='secondaryHeader'>
             <h4>
               Long headline on two lines to turn your visitors into users 
             </h4>  
           </Text>
-          <Text intent='primary' size='extralarge'>
+          <Text intent='teritary' size='extralarge'>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. 
               Nulla itaque porro nostrum aliquid modi obcaecati consectetur.
@@ -32,8 +33,8 @@ const ProductsDescription: FC<Props> = ({}) => {
           <ul className='flex flex-col gap-5'>
             {benefits.map((item: BenefitsProps) => (
               <li className='flex flex-row items-center gap-3'>
-                <AiOutlineCheckCircle className='text-xl text-white' />
-                <Text intent='primary' size='extralarge'>
+                <AiOutlineCheckCircle className='text-xl text-black' />
+                <Text intent='teritary' size='extralarge'>
                   {item.benefit}
                 </Text>
               </li>

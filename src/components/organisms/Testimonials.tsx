@@ -9,7 +9,7 @@ interface Props {}
 
 const Testimonials: FC<Props> = ({}) => {
   return (
-    <div className='bg-white h-[65rem] flex
+    <div className='bg-white h-[60rem] flex
     flex-col items-center justify-center gap-32'>
       <div className='w-[40rem] flex flex-col gap-12 text-center
       items-center'>
@@ -26,7 +26,7 @@ const Testimonials: FC<Props> = ({}) => {
         </p>  
         </Text>
       </div>  
-      <div className='flex flex-row justify-around w-[80%]'>
+      <div className='flex flex-row justify-between w-[80%]'>
         {testimonials.map((item: TestimonialsProps) => (
           <TestimonialCard name={item.name} description={item.description}
           review={item.review} image={noimage} />  

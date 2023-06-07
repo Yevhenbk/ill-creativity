@@ -11,8 +11,8 @@ const Testimonials: FC<Props> = ({}) => {
   return (
     <div className='bg-white h-[60rem] flex
     flex-col items-center justify-center gap-32'>
-      <div className='w-[40rem] flex flex-col gap-12 text-center
-      items-center'>
+      <div className='w-[40rem] flex flex-col gap-12 text-left
+      items-start'>
         <Text intent='teritary' uppercase={true} bold={true}
         size='teritaryHeader'>
         <h4>

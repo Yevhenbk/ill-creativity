@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import Link from 'next/link'
 import Text from '@atoms/Text'
 import Button from '@molecules/Button'
 import Image from 'next/image'
@@ -23,11 +24,13 @@ const Slider: FC<Props> = () => {
               adipisicing elit itaque porro nostrum.
             </p>  
           </Text>
-          <Button intent='primary' fullWidth={false}>
-            <Text intent='primary' uppercase={true} size='small'>
-              Shop Now
-            </Text>
-          </Button>
+          <Link href='/shop'>
+            <Button intent='primary' fullWidth={false}>
+              <Text intent='primary' uppercase={true} size='small'>
+                Shop Now
+              </Text>
+            </Button>
+          </Link>
         </div>
       </div>  
       <div className='w-[50vw] h-[45rem]'>

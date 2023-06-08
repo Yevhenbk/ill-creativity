@@ -11,7 +11,8 @@ const Testimonials: FC<Props> = ({}) => {
   return (
     <div className='bg-white h-[50rem] flex
     flex-col items-center justify-center gap-32'>
-      <div className='flex flex-row justify-between w-[80%]'>
+      <div className='flex flex-row justify-between w-[80%]
+      max-[1560px]:w-[100%] max-[1560px]:justify-around'>
         {testimonials.map((item: TestimonialsProps) => (
           <TestimonialCard name={item.name} description={item.description}
           review={item.review} image={noimage} />  

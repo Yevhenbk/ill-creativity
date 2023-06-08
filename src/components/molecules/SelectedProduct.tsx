@@ -13,9 +13,10 @@ interface Props {
 const SelectedProduct: FC<Props> = (props) => {
   return (
     <div className='h-[30rem] flex flex-col items-center
-    justify-center overflow-hidden'>
+    justify-center overflow-hidden hover:cursor-pointer'>
       <Image src={props.image} alt={props.alt} className='w-[100%] 
-      h-[100%] object-cover' />  
+      h-[100%] object-cover transition-transform duration-300 transform-gpu 
+      hover:scale-105' />  
       <div className='h-0 relative bottom-[8rem] text-center'>
         <Text intent='teritary' uppercase={true} size='large'
         bold={true}>

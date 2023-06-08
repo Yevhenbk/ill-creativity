@@ -6,6 +6,7 @@ import ProductsDescription from '@organisms/ProductsDescription'
 import Slider from '@organisms/Slider'
 import Testimonials from '@organisms/Testimonials'
 import Objections from '@organisms/Objections'
+import Footer from '@organisms/Footer'
 
 interface Props {}
 
@@ -19,6 +20,7 @@ const Home: FC<Props> = ({}) => {
         <ProductsDescription />
         <Testimonials />
         <Objections />
+        <Footer />
       </Wrapper>
     </main>
   )

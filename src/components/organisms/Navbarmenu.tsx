@@ -8,7 +8,8 @@ import {
   menuItems, Props as MenuItemsProps 
   } from '@utils/MenuItems'
 import { 
-  AiOutlineShopping, AiOutlineSearch, AiOutlineMenu
+  AiOutlineShopping, AiOutlineSearch, AiOutlineMenu,
+  AiOutlineLeft
  } from 'react-icons/ai'
 import { GrClose } from 'react-icons/gr'
 
@@ -60,17 +61,38 @@ const Navbarmenu: FC<Props> = ({}) => {
         </button>
         <div className={`bg-white absolute right-0 top-0 duration-300 shadow-md pt-28
         w-[100vw] h-[100vh] min-[700px]:hidden flex flex-col justify-start items-center
-        gap-6 ${isMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full'}`}>
+        gap-2 ${isMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full'}`}>
           <button onClick={toggleMenu}>
             <GrClose className='absolute top-8 right-8 text-2xl text-black' />
           </button>
           {menuItems.map((item: MenuItemsProps) => (
-            <Link href={item.title} className='w-[70%] text-right'>
-              <Text intent='teritary' uppercase={true} size='large'>
-                <p className='underline-on-hover'>{item.name}</p>
+            <Link href={item.title} className='w-[80%] text-right bg-black py-2 px-4
+            flex flex-row-reverse items-center justify-between'>
+              <Text intent='primary' uppercase={true} size='large'>
+                <p>{item.name}</p>
               </Text>
+              <AiOutlineLeft className='text-white text-xl' />
             </Link>
           ))}
+          <Link href='/support' className='text-right w-[70%] mt-12'>
+            <Text intent='teritary' size='small' uppercase={true}>
+              <p>Support</p>
+            </Text>
+          </Link>
+          <div className='w-[70%] flex flex-col items-end text-black gap-5 pt-6'>
+            <div className='flex flex-row-reverse items-center w-[6rem] justify-between'>
+             <AiOutlineSearch className='text-2xl' />
+             <Text intent='teritary' size='small'>
+              <p>Search</p>
+            </Text>
+            </div>
+            <div className='flex flex-row-reverse items-center w-[6rem] justify-between'>
+             <AiOutlineShopping className='text-2xl' />
+             <Text intent='teritary' size='small'>
+              <p>Cart</p>
+            </Text>
+            </div>
+          </div>
         </div>
       </Navbar>
       <div className='bg-black h-[2.4rem] flex justify-center items-center

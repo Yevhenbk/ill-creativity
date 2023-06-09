@@ -15,7 +15,7 @@ const Home: FC<Props> = ({}) => {
   return (
     <main>
       <Navbarmenu />
-      <Wrapper>
+      {/* <Wrapper>
         <Slider />
         <SelectedProducts />
         <ProductsDescription />
@@ -23,7 +23,7 @@ const Home: FC<Props> = ({}) => {
         <Objections />
         <CallToAction />
         <Footer />
-      </Wrapper>
+      </Wrapper> */}
     </main>
   )
 }

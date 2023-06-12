@@ -11,9 +11,9 @@ const Objections: FC<Props> = ({}) => {
 
   return (
     <div className='min-h-[50rem] flex flex-col items-center justify-start
-    gap-20 pb-40'>
+    gap-20 pb-40 max-[800px]:py-12'>
       <div className='w-[40rem] flex flex-col gap-12 text-left
-      items-start'>
+      items-start max-[800px]:w-[20rem]'>
         <Text intent='teritary' uppercase={true} bold={true}
         size='teritaryHeader'>
         <h4>
@@ -27,9 +27,9 @@ const Objections: FC<Props> = ({}) => {
         </p>  
         </Text>
       </div> 
-      <div className='w-[40rem] flex flex-col gap-0'>
-        {objections.map((item: ObjectionsProps, index) => (
-          <ObjectionItem index={index} id={item.id} question={item.question}
+      <div className='w-[40rem] flex flex-col gap-0 max-[800px]:w-[20rem]'>
+        {objections.map((item: ObjectionsProps, index: number) => (
+          <ObjectionItem key={index} index={index} id={item.id} question={item.question}
           answer={item.answer} />
         ))}
       </div>

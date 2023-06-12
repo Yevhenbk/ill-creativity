@@ -34,8 +34,8 @@ const ObjectionItem: FC<Props> = (props) => {
           <p>{props.question}</p>
         </Text>
         {expandedObjId === props.id
-        ? <AiOutlineDown className='text-xl' /> 
-        :  <AiOutlineRight className='text-xl' />}
+        ? <AiOutlineDown className='text-xl max-[800px]:ml-8' /> 
+        :  <AiOutlineRight className='text-xl max-[800px]:ml-8' />}
       </div>
       <div
         className={`answer ${

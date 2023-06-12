@@ -15,15 +15,15 @@ const Home: FC<Props> = ({}) => {
   return (
     <main>
       <Navbarmenu />
-      {/* <Wrapper>
+      <Wrapper>
         <Slider />
-        <SelectedProducts />
+        {/* <SelectedProducts />
         <ProductsDescription />
         <Testimonials />
         <Objections />
         <CallToAction />
-        <Footer />
-      </Wrapper> */}
+        <Footer /> */}
+      </Wrapper>
     </main>
   )
 }

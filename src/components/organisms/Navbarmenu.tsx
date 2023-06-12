@@ -36,8 +36,8 @@ const Navbarmenu: FC<Props> = ({}) => {
           </Link>
           <div className='flex justify-around w-[70%] items-center
           max-[700px]:hidden'>
-          {menuItems.map((item: MenuItemsProps) => (
-            <Link href={item.title}>
+          {menuItems.map((item: MenuItemsProps, index: number) => (
+            <Link key={index} href={item.title}>
               <Text intent='primary' uppercase={true} size='extrasmall'>
                 <p className='underline-on-hover'>{item.name}</p>
               </Text>
@@ -65,8 +65,8 @@ const Navbarmenu: FC<Props> = ({}) => {
           <button onClick={toggleMenu}>
             <GrClose className='absolute top-8 right-8 text-2xl text-black' />
           </button>
-          {menuItems.map((item: MenuItemsProps) => (
-            <Link href={item.title} className='w-[80%] text-right bg-black py-2 px-4
+          {menuItems.map((item: MenuItemsProps, index: number) => (
+            <Link key={index} href={item.title} className='w-[80%] text-right bg-black py-2 px-4
             flex flex-row-reverse items-center justify-between'>
               <Text intent='primary' uppercase={true} size='large'>
                 <p>{item.name}</p>

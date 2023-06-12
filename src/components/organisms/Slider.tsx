@@ -39,7 +39,7 @@ const Slider: FC<Props> = () => {
       <div className='w-[50vw] h-[45rem] max-[1200px]:w-[100%] max-[1200px]:h-[25rem]
       max-[1200px]:flex max-[1200px]:justify-content max-[1200px]:items-center  max-[1200px]:overflow-hidden'>
         <Image src={noimage} alt='noimage' className='w-[100%] h-[100%] 
-        object-cover max-[1200px]:h-auto' />
+        object-cover max-[1200px]:h-[25rem]' />
       </div>  
     </div>
   )

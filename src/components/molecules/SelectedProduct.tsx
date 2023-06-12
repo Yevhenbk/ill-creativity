@@ -13,7 +13,8 @@ interface Props {
 const SelectedProduct: FC<Props> = (props) => {
   return (
     <div className='h-[30rem] flex flex-col items-center
-    justify-center overflow-hidden hover:cursor-pointer'>
+    justify-center overflow-hidden hover:cursor-pointer
+    max-[1200px]:h-[20rem]'>
       <Image src={props.image} alt={props.alt} className='w-[100%] 
       h-[100%] object-cover transition-transform duration-300 transform-gpu 
       hover:scale-105' />  

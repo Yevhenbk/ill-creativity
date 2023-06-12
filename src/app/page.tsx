@@ -18,8 +18,8 @@ const Home: FC<Props> = ({}) => {
       <Wrapper>
         <Slider />
         <SelectedProducts />
-        {/* <ProductsDescription />
-        <Testimonials />
+        <ProductsDescription />
+        {/* <Testimonials />
         <Objections />
         <CallToAction />
         <Footer /> */}

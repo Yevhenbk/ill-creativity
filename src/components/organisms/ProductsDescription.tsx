@@ -11,13 +11,14 @@ interface Props {}
 const ProductsDescription: FC<Props> = ({}) => {
   return (
     <div className='h-[40rem] flex flex-row justify-around
-    items-center bg-black relative'>
+    items-center bg-black relative max-[800px]:items-center
+    max-[800px]:justify-center'>
       <Image src={noimage} alt='Product' className='w-[100vw]
       h-[40rem] object-cover' />
-      <div className='w-[50vw] flex flex-col items-center absolute
-      right-0'>
+      <div className='w-[50rem] flex flex-col items-center absolute
+      right-0 max-[800px]:w-[20rem] max-[800px]:left-[2rem]'>
         <div className='w-[30rem] flex flex-col gap-12 text-left
-        items-start'>
+        items-start max-[800px]:w-[20rem]'>
           <Text intent='teritary' uppercase={true} bold={true}
           size='secondaryHeader'>
             <h4>

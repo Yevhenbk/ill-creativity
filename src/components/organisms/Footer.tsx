@@ -10,9 +10,11 @@ interface Props {}
 const Footer: FC<Props> = ({}) => {
   return (
     <div className='bg-black h-[25rem] flex flex-row
-    justify-around items-center'>
+    justify-around items-center max-[950px]:h-auto
+    max-[950px]:py-12'>
       <div className='flex flex-row justify-around w-[90%]
-      items-start'>
+      items-start max-[950px]:flex-col-reverse max-[950px]:gap-12
+      max-[950px]:w-[80%]'>
         <Text intent='primary'size='extralarge' bold={true}
         uppercase={true} italic={true}>
           / Logo

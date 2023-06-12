@@ -21,8 +21,8 @@ const Home: FC<Props> = ({}) => {
         <ProductsDescription />
         <Testimonials />
         <Objections />
-        {/* <CallToAction />
-        <Footer /> */}
+        <CallToAction />
+        <Footer />
       </Wrapper>
     </main>
   )

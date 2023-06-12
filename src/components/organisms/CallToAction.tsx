@@ -14,7 +14,9 @@ const CallToAction: FC<Props> = ({}) => {
       </Text>
       <Text intent='teritary' size='teritaryHeader' 
       uppercase={true} bold={true}>
-        <p className='w-[40rem] text-center'>Long headline to turn your visitors into users</p>
+        <p className='w-[40rem] text-center max-[800px]:w-[20rem]'>
+          Long headline to turn your visitors into users
+        </p>
       </Text>
       <Link href='/shop'>
         <Button intent='primary' fullWidth={false}>

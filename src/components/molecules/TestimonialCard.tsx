@@ -13,7 +13,8 @@ interface Props {
 const TestimonialCard: FC<Props> = (props) => {
   return (
     <div className='w-[25rem] h-[30rem] flex flex-col 
-    justify-between border-2 border-gray-200 p-6'>
+    justify-between border-2 border-gray-200 p-6
+    max-[700px]:w-[22rem] max-[700px]:h-[35rem]'>
       <Text intent='teritary' size='large'>
         "{props.review}"
       </Text>

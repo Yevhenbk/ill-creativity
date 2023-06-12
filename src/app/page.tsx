@@ -17,8 +17,8 @@ const Home: FC<Props> = ({}) => {
       <Navbarmenu />
       <Wrapper>
         <Slider />
-        {/* <SelectedProducts />
-        <ProductsDescription />
+        <SelectedProducts />
+        {/* <ProductsDescription />
         <Testimonials />
         <Objections />
         <CallToAction />

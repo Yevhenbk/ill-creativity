@@ -4,9 +4,13 @@ import Text from '@atoms/Text'
 import Button from '@molecules/Button'
 import { AiOutlineStar } from 'react-icons/ai'
 import noimage from '../../../public/noimage.jpg'
+// import Comments from '@molecules/Comments'
+// import ProductComments from './ProductComments'
 
 interface Props {
   productId: number,
+  commentId: number,
+  commentedId: number,
   title: string,
   description: string,
   price: string,
@@ -57,6 +61,8 @@ const ProductInfo: FC<Props> = (props) => {
           <Text intent='teritary' size='medium'>
             <p>(no comments yet)</p>
           </Text>
+          {/* <Comments productId={props.commentId} />
+          <ProductComments productId={props.commentedId} /> */}
         </div>
       </div>
     </div>

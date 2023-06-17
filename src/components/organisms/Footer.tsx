@@ -52,7 +52,7 @@ const Footer: FC<Props> = ({}) => {
             <p className='pb-2'>Contact</p>
           </Text>
           <Button intent='secondary' fullWidth={false}>
-            <Text intent='quaternary' size='large'>
+            <Text intent='quinary' size='large'>
               <p>Email Us</p>
             </Text>
             <AiOutlineRight className='text-xl' />

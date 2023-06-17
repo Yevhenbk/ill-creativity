@@ -20,7 +20,7 @@ const CallToAction: FC<Props> = ({}) => {
       </Text>
       <Link href='/shop'>
         <Button intent='primary' fullWidth={false}>
-          <Text intent='primary' uppercase={true} size='small'>
+          <Text intent='quinary' uppercase={true} size='small'>
             Shop Now
           </Text>
         </Button>

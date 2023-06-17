@@ -26,7 +26,7 @@ body {
 }
 
 .underline-on-hover:hover::before {
-  background-color: #909090;
+  background-color: #F4AE4F;
 }
 
 

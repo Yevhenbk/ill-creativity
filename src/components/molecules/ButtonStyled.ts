@@ -6,9 +6,10 @@ export const buttonStyles = cva(
   {
     variants: {
       intent: {
-        primary: 'bg-black border-2 border-black hover:bg-white hover:text-black text-white',
+        primary: 'bg-black border-2 border-black rounded-lg hover:text-black text-white hover:bg-[#F4AE4F]',
         secondary: ['bg-black border-2 border-white flex justify-between',
-        'hover:bg-white hover:text-black text-white w-[15rem] h-[3rem]']
+        'hover:bg-white hover:text-black text-white w-[15rem] h-[3rem] rounded-lg'],
+        teritary: 'bg-black border-2 border-black rounded-md hover:text-black text-white hover:bg-[#F4AE4F] w-[8rem] h-[2.5rem]'
       },
       fullWidth: {
         true: 'w-[100%]',

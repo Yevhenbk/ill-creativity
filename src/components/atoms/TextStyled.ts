@@ -10,6 +10,7 @@ export const textStyles = cva(
         teritary: 'text-black',
         quaternary: 'text-[#F4AE4F]',
         quinary: '',
+        sextary: 'text-gray-700'
       },
       uppercase: {
         true: 'uppercase'

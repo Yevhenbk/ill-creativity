@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 interface Props {
+  productId: number,
   image: any,
   alt: string,
   title: string,
@@ -17,8 +18,9 @@ const SelectedProduct: FC<Props> = (props) => {
     <div className='flex flex-col items-center
     justify-center overflow-hidden
     max-[1200px]:h-[20rem] w-[80%] h-[100%] rounded-lg'>
-      <Image src={props.image} alt={props.alt} className='w-[100%] rounded-lg 
-      h-[20rem] object-cover transition-transform duration-300 transform-gpu' />  
+      <img src={props.image} alt={props.alt} className='w-[100%] rounded-lg 
+      h-[20rem] object-cover transition-transform duration-300 transform-gpu
+      shadow-sm' />  
       <div className='flex flex-row justify-between w-[100%] pt-4 items-center'>
         <div className='text-left'>
           <Text intent='teritary' uppercase={true} size='large'
@@ -33,10 +35,10 @@ const SelectedProduct: FC<Props> = (props) => {
             {props.price}
           </Text>
         </div>
-        <Link href='/shop'>
+        <Link href={`/shop/${props.productId}`}>
           <Button intent='teritary' fullWidth={false}>
             <Text intent='quinary' uppercase={true} size='extrasmall'>
-              Add to Cart
+              Buy Now
             </Text>
           </Button>
         </Link>

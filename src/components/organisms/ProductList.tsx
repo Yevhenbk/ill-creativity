@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import Product from '@molecules/Product'
+import SelectedProduct from '@molecules/SelectedProduct'
 import Text from '@atoms/Text'
 import { 
   products, Props as ProductProps
@@ -14,11 +14,12 @@ const ProductList: FC<Props> = () => {
       size='header'>
         <h1 className='w-[100%] text-center'>Shop All</h1>  
       </Text>
-      <div className='grid grid-cols-3 pt-16'>
+      <div className='w-[100%] grid grid-cols-3 pt-16
+      items-center justify-items-center gap-y-12 pb-8'>
         {products.map((item: ProductProps) => (
-          <Product key={item.id} title={item.title}
+          <SelectedProduct key={item.id} title={item.title}
           description={item.description} price={item.price} 
-          productId={item.id} />
+          productId={item.id} image={item.image} alt={item.title} />
         ))}
       </div>
     </div>

@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { AiOutlineCheckCircle } from 'react-icons/ai'
+import { AiFillCheckCircle } from 'react-icons/ai'
 import Text from '@atoms/Text'
 import { 
   benefits, Props as BenefitsProps } from '@utils/Benefits'
@@ -13,9 +13,9 @@ const ProductsDescription: FC<Props> = ({}) => {
     <div className='h-[40rem] flex flex-row justify-around
     items-center relative max-[800px]:items-center
     max-[800px]:justify-center max-[800px]:h-[45rem]'>
-      <Image src={noimage} alt='Product' className='w-[100vw]
+      <Image src={noimage} alt='Product' className='w-[45vw]
       h-[40rem] object-cover max-[800px]:hidden' />
-      <div className='w-[50rem] flex flex-col items-center absolute
+      <div className='w-[50rem] flex flex-col items-center
       right-0 max-[800px]:w-[20rem] max-[800px]:left-[2rem]'>
         <div className='w-[30rem] flex flex-col gap-12 text-left
         items-start max-[800px]:w-[20rem]'>
@@ -34,7 +34,7 @@ const ProductsDescription: FC<Props> = ({}) => {
           <ul className='flex flex-col gap-5'>
             {benefits.map((item: BenefitsProps) => (
               <li className='flex flex-row items-center gap-3'>
-                <AiOutlineCheckCircle className='text-xl text-black' />
+                <AiFillCheckCircle className='text-xl text-green-500' />
                 <Text intent='teritary' size='extralarge'>
                   {item.benefit}
                 </Text>

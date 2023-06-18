@@ -11,7 +11,7 @@ const Objections: FC<Props> = ({}) => {
 
   return (
     <div className='min-h-[50rem] flex flex-col items-center justify-start
-    gap-20 pb-40 max-[800px]:py-12'>
+    gap-20 pb-40 max-[800px]:py-12 pt-32'>
       <div className='w-[40rem] flex flex-col gap-12 text-left
       items-start max-[800px]:w-[20rem]'>
         <Text intent='teritary' uppercase={true} bold={true}

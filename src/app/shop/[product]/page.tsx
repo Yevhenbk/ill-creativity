@@ -24,7 +24,7 @@ const ProductPage: FC<Props> = (props) => {
         <div className='flex justify-center'>
           <ProductInfo title={product.title} description={product.description}
           price={product.price} productId={product.id} info={product.info} 
-          commentId={product.id} commentedId={product.id} />
+          commentId={product.id} commentedId={product.id} image={product.image} />
         </div>
       ) : (
         <p>Product not found.</p>

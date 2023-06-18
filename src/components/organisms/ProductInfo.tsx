@@ -1,11 +1,7 @@
 import React, { FC } from 'react'
-import Image from 'next/image'
 import Text from '@atoms/Text'
 import Button from '@molecules/Button'
 import { AiOutlineStar } from 'react-icons/ai'
-import noimage from '../../../public/noimage.jpg'
-// import Comments from '@molecules/Comments'
-// import ProductComments from './ProductComments'
 
 interface Props {
   productId: number,
@@ -14,13 +10,15 @@ interface Props {
   title: string,
   description: string,
   price: string,
-  info: string
+  info: string,
+  image: string
 }
 
 const ProductInfo: FC<Props> = (props) => {
   return (
     <div className='grid grid-cols-2 w-[80vw] py-20'>
-      <Image src={noimage} alt='image' className='object-cover h-[40rem]'/>
+      <img src={props.image} alt='image' className='object-cover h-[35rem]
+      rounded-lg'/>
       <div className='flex flex-col ml-12 gap-12'>
         <div className='flex flex-col gap-2'>
           <Text intent='teritary' uppercase={true} size='secondaryHeader'
@@ -49,7 +47,7 @@ const ProductInfo: FC<Props> = (props) => {
           {props.description}
         </Text>
         <Button intent='primary' fullWidth={true}>
-          <Text intent='primary' uppercase={true} size='small'>
+          <Text intent='quinary' uppercase={true} size='small'>
             Add to Cart
           </Text>
         </Button>
@@ -61,8 +59,6 @@ const ProductInfo: FC<Props> = (props) => {
           <Text intent='teritary' size='medium'>
             <p>(no comments yet)</p>
           </Text>
-          {/* <Comments productId={props.commentId} />
-          <ProductComments productId={props.commentedId} /> */}
         </div>
       </div>
     </div>

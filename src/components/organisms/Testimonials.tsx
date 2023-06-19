@@ -10,7 +10,8 @@ interface Props {}
 const Testimonials: FC<Props> = ({}) => {
   return (
     <div className='pt-[4rem] bg-[#F2F4F5] '>
-      <div className='w-[100%] flex flex-col items-center gap-5'>
+      <div className='w-[100%] flex flex-col items-center gap-5
+      max-[700px]:text-center max-[700px]:px-8'>
         <Text intent='teritary' uppercase={true} size='secondaryHeader'
         bold={true}>
           <h3>What do they say about us?</h3>

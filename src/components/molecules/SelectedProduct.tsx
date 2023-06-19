@@ -16,8 +16,7 @@ interface Props {
 const SelectedProduct: FC<Props> = (props) => {
   return (
     <div className='flex flex-col items-center
-    justify-center overflow-hidden
-    max-[1200px]:h-[20rem] w-[80%] h-[100%] rounded-lg'>
+    justify-center overflow-hidden w-[80%] h-[100%] rounded-lg'>
       <img src={props.image} alt={props.alt} className='w-[100%] rounded-lg 
       h-[20rem] object-cover transition-transform duration-300 transform-gpu
       shadow-sm' />  

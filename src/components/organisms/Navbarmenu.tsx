@@ -67,11 +67,12 @@ const Navbarmenu: FC<Props> = ({}) => {
           </button>
           {menuItems.map((item: MenuItemsProps, index: number) => (
             <Link key={index} href={item.title} className='w-[80%] text-right bg-black py-2 px-4
-            flex flex-row-reverse items-center justify-between'>
-              <Text intent='primary' uppercase={true} size='large'>
+            flex flex-row-reverse items-center justify-between rounded-lg text-white hover:text-black
+            hover:bg-[#F4AE4F] border-2 border-black'>
+              <Text intent='quinary' uppercase={true} size='large'>
                 <p>{item.name}</p>
               </Text>
-              <AiOutlineLeft className='text-white text-xl' />
+              <AiOutlineLeft className='text-xl' />
             </Link>
           ))}
           <Link href='/support' className='text-right w-[70%] mt-12'>

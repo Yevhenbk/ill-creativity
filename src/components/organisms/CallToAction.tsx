@@ -8,7 +8,7 @@ interface Props {}
 const CallToAction: FC<Props> = ({}) => {
   return (
     <div className='flex flex-col justify-start
-    items-center h-[28rem] gap-12'>
+    items-center h-[28rem] gap-12 bg-[#F2F4F5]'>
       <Text intent='teritary' size='large'>
         <p>Tagline</p>
       </Text>

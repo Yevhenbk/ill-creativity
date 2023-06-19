@@ -15,7 +15,8 @@ const ProductList: FC<Props> = () => {
         <h1 className='w-[100%] text-center'>Shop All</h1>  
       </Text>
       <div className='w-[100%] grid grid-cols-3 pt-16
-      items-center justify-items-center gap-y-12 pb-8'>
+      items-center justify-items-center gap-y-12 pb-8
+      max-[1125px]:flex max-[1125px]:flex-col'>
         {products.map((item: ProductProps) => (
           <SelectedProduct key={item.id} title={item.title}
           description={item.description} price={item.price} 

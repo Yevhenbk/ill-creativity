@@ -3,6 +3,7 @@ import Text from '@atoms/Text'
 import Image from 'next/image'
 import Link from 'next/link'
 import { IoMdShareAlt } from 'react-icons/io'
+import { AiFillStar } from 'react-icons/ai'
 
 interface Props {
   image: any,
@@ -29,9 +30,13 @@ const TestimonialCard: FC<Props> = (props) => {
             <Text intent='teritary' size='extralarge' bold={true}>
               {props.name}
             </Text>
-            <Text intent='teritary' size='medium'>
-              {props.description}
-            </Text>
+            <div className='flex mt-2 text-[#F4AE4F]'>
+              <AiFillStar />
+              <AiFillStar />
+              <AiFillStar />
+              <AiFillStar />
+              <AiFillStar />
+            </div>
           </div>
           <Link href=''>
             <IoMdShareAlt className='text-3xl text-black

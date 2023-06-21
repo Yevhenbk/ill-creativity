@@ -5,12 +5,14 @@ import { buttonStyles } from './ButtonStyled'
 interface Props extends 
   VariantProps<typeof buttonStyles> {
     onClick?: MouseEventHandler<HTMLButtonElement>,
-    children: ReactNode
+    children: ReactNode,
+    type?: 'button' | 'submit' | 'reset' | undefined
   }  
 
 const Button: FC<Props> = ({ intent, fullWidth, ...props }) => {
   return (
     <button
+      type={props.type}
       className={buttonStyles({ intent, fullWidth })}
       onClick={props.onClick}
     >

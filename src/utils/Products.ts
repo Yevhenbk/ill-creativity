@@ -36,7 +36,7 @@ export const products: Props[] = [
   info: 'An aesthetic way to stay organised, draw doodles, write cute notes in your own fully customizable way. It’s bright, can change colour, portable and reusable meaning you will never need to use a boring whiteboard and paper ever AGAIN!'},
   { id: 7, title: 'Jellyfish Led Lamp', description: '5 Colors Jellyfish LED Lamp', image: ['https://ae01.alicdn.com/kf/H765e273f724e4471b714fccefaaaa0c6B.jpg_640x640Q90.jpg_.webp',
   'https://ae01.alicdn.com/kf/Hcd40c0018dca42c1b533e9bea7388879G.jpg_640x640Q90.jpg_.webp', 'https://ae01.alicdn.com/kf/He0d4d96bfdfd47c4a3ffd113dc6be68dO.jpg_640x640Q90.jpg_.webp',
-  'https://ae01.alicdn.com/kf/He0d4d96bfdfd47c4a3ffd113dc6be68dO.jpg_640x640Q90.jpg_.webp', 'https://ae01.alicdn.com/kf/H569aa37c6d404978b1b90c346875dc8fP.jpg_640x640Q90.jpg_.webp'], price: '29.99€',
+  'https://ae01.alicdn.com/kf/H569aa37c6d404978b1b90c346875dc8fP.jpg_640x640Q90.jpg_.webp'], price: '29.99€',
   info: 'An aesthetic way to stay organised, draw doodles, write cute notes in your own fully customizable way. It’s bright, can change colour, portable and reusable meaning you will never need to use a boring whiteboard and paper ever AGAIN!'},
   { id: 8, title: 'Crystal Stone Organite', description: 'Pyramid Energy Generator', image: ['https://ae01.alicdn.com/kf/Sa6fb69231f834181b1d03baaaadb9405M.jpg_640x640Q90.jpg_.webp',
   'https://ae01.alicdn.com/kf/S6e4ea7c189e848cb927215fd2945a410T.jpg_640x640Q90.jpg_.webp', 'https://ae01.alicdn.com/kf/S8b604aeb354449eeaac6d82d05687b0cE.jpg_640x640Q90.jpg_.webp',

@@ -29,6 +29,12 @@ body {
   background-color: #F4AE4F;
 }
 
+.quantity-input::-webkit-inner-spin-button,
+.quantity-input::-webkit-outer-spin-button {
+  opacity: 1;
+  height: auto;
+}
+
 
 
 

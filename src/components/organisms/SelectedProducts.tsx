@@ -27,7 +27,7 @@ const SelectedProducts: FC<Props> = ({}) => {
         <Link href='/shop'>
           <Button intent='quaternary' fullWidth={false}>
             <Text intent='quinary' uppercase={true} size='small'>
-              See more
+              View All
             </Text>
           </Button>
         </Link>

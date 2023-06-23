@@ -11,7 +11,8 @@ export const buttonStyles = cva(
         'hover:bg-white hover:text-black text-white w-[15rem] h-[3rem] rounded-lg'],
         teritary: 'bg-black border-2 border-black rounded-md hover:text-black text-white hover:bg-[#F4AE4F] w-[8rem] h-[2.5rem]',
         quaternary: 'bg-transparent w-[8rem] h-[2.25rem] border-2 border-black rounded-full hover:bg-black hover:text-white',
-        quinary: 'bg-transparent border-2 border-gray-200 rounded-lg hover:border-black text-gray-600 hover:text-black'
+        quinary: 'bg-transparent border-2 border-gray-200 rounded-lg hover:border-black text-gray-600 hover:text-black',
+        cartItem: 'bg-black border-2 border-black rounded-md hover:text-black text-white hover:bg-[#F4AE4F] w-[8rem] h-[2rem]',
       },
       fullWidth: {
         true: 'w-[100%]',

@@ -1,9 +1,10 @@
 'use client'
 
-import React, { FC, useState } from 'react'
+import React, { FC, useState, useContext } from 'react'
 import Text from '@atoms/Text'
 import Button from '@molecules/Button'
 import ImageGallery from '@organisms/ImageGallery'
+import { Context } from '@store/context'
 import CommentForm from '@molecules/CommentForm'
 import { AiOutlineStar } from 'react-icons/ai'
 
@@ -18,11 +19,51 @@ interface Props {
   image: string
 }
 
+interface ItemsProps {
+  id: number,
+  title: string,
+  description: string,
+  quantity: number,
+  image: string,
+  price: string
+}
+
 const ProductInfo: FC<Props> = (props) => {
+
+  const { setCartItems, cartItems } = useContext(Context)
 
   const [quantity, setQuantity] = useState<number>(1)
 
   const maxQuantity = 10
+
+  const product: ItemsProps = {
+    id: props.productId,
+    title: props.title,
+    description: props.description,
+    price: props.price,
+    quantity: quantity,
+    image: props.image,
+  }
+
+  const addToCart = () => {
+    const existingProduct = cartItems.find((item: any) => item.id === product.id);
+
+    if (existingProduct) {
+      // If the product already exists in the cart, update the quantity with a maximum of 10
+      const updatedCartItems = cartItems.map((item: any) => {
+        if (item.id === product.id) {
+          const newQuantity = Math.min(item.quantity + product.quantity, 10);
+          return { ...item, quantity: newQuantity };
+        }
+        return item;
+      });
+  
+      setCartItems(updatedCartItems);
+    } else {
+      // If the product is not already in the cart, add it to the cartItems array
+      setCartItems([...cartItems, product]);
+    }
+  }
 
   const handleQuantityChange = (e: any) => {
     let newQuantity = parseInt(e.target.value, 10)
@@ -75,7 +116,7 @@ const ProductInfo: FC<Props> = (props) => {
               max-w-[5rem] rounded-lg items-center justify-center
               appearance-none quantity-input'
             />
-            <Button intent='primary' fullWidth={true}>
+            <Button intent='primary' fullWidth={true} onClick={addToCart}>
               <Text intent='quinary' uppercase={true} size='small'>
                 Add to Cart
               </Text>
@@ -87,10 +128,10 @@ const ProductInfo: FC<Props> = (props) => {
           <div className='flex flex-col gap-12'>
             <Text intent='teritary' uppercase={true} size='secondaryHeader'
             bold={true}>
-              <p>Comments</p>
+              <p>Recent Comments</p>
             </Text>
             <Text intent='teritary' size='medium'>
-              <p>(no comments yet)</p>
+              <p>( No comments yet )</p>
             </Text>
           </div>
         </div>

@@ -1,14 +1,15 @@
 'use client'
 
-import React, { FC, useState } from 'react'
+import React, { FC, useState, useContext } from 'react'
 import Text from '@atoms/Text'
 import Navbar from './Navbar'
+import { Context } from '@store/context'
 import Link from 'next/link'
 import { 
   menuItems, Props as MenuItemsProps 
   } from '@utils/MenuItems'
 import { 
-  AiOutlineShopping, AiOutlineSearch, AiOutlineMenu,
+  AiOutlineShopping, AiOutlineMenu,
   AiOutlineLeft
  } from 'react-icons/ai'
 import { GrClose } from 'react-icons/gr'
@@ -16,6 +17,8 @@ import { GrClose } from 'react-icons/gr'
 interface Props {}
 
 const Navbarmenu: FC<Props> = ({}) => {
+
+  const { cartItems } = useContext(Context)
 
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
 
@@ -53,8 +56,12 @@ const Navbarmenu: FC<Props> = ({}) => {
               underline-on-hover'>Support</p>
             </Text>
           </Link>
-          <AiOutlineSearch className='text-[1.75rem] text-white' />
-          <AiOutlineShopping className='text-[1.75rem] text-white' />
+          <Link href='/cart' className='flex relative'>
+            <AiOutlineShopping className='text-[1.75rem] text-white hover:cursor-pointer' />
+            {cartItems.length !== 0 ? 
+              <div className='absolute w-2 h-2 rounded-full bg-[#F4AE4F]' /> 
+            : <></>}
+          </Link>
         </div>
         <button onClick={toggleMenu} className='min-[700px]:hidden'>
           <AiOutlineMenu className='text-white text-2xl min-[700px]:hidden' />
@@ -81,18 +88,14 @@ const Navbarmenu: FC<Props> = ({}) => {
             </Text>
           </Link>
           <div className='w-[70%] flex flex-col items-end text-black gap-5 pt-6'>
-            <div className='flex flex-row-reverse items-center w-[6rem] justify-between'>
-             <AiOutlineSearch className='text-2xl' />
-             <Text intent='teritary' size='small'>
-              <p>Search</p>
-            </Text>
-            </div>
+          <Link href='/cart'>
             <div className='flex flex-row-reverse items-center w-[6rem] justify-between'>
              <AiOutlineShopping className='text-2xl' />
              <Text intent='teritary' size='small'>
               <p>Cart</p>
             </Text>
             </div>
+          </Link>
           </div>
         </div>
       </Navbar>

@@ -27,7 +27,7 @@ const AddCart: FC<Props> = ({}) => {
           description={item.description} quantity={item.quantity} image={item.image}/>
         )) : <></>}
       </div>
-      <div className='w-[35rem] flex items-center justify-center pt-32'>
+      <div className='w-[35rem] flex items-center justify-center pt-20'>
         <Button intent='primary' fullWidth={true}>
           <Text intent='quinary' size='large' uppercase={true}>
             Checkout  

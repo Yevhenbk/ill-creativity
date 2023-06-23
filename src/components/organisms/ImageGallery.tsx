@@ -9,7 +9,7 @@ interface Props {
 const ImageGallery: FC<Props> = (props) => {
 
   const [selectedImage, setSelectedImage] = useState(props.images[0])
-  const rotationInterval: number = 3000
+  const rotationInterval: number = 5000
 
   const handleImageClick = (image: string) => {
     setSelectedImage(image)

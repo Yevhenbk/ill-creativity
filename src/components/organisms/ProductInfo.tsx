@@ -59,7 +59,7 @@ const ProductInfo: FC<Props> = (props) => {
         <Text intent='teritary' size='large'>
           {props.info}
         </Text>
-        <div className='flex flex-col gap-5'>
+        <div className='flex flex-col gap-8'>
           <Text intent='teritary' size='extralarge' bold={true}
           uppercase={true}>
             {props.description}
@@ -82,14 +82,8 @@ const ProductInfo: FC<Props> = (props) => {
             </Button>
           </div>
         </div>
-        <div className='flex flex-col gap-32 pt-20'>
-          <div className='flex flex-col gap-12'>
-            <Text intent='teritary' uppercase={true} size='secondaryHeader'
-            bold={true}>
-              <p>Leave comment</p>
-            </Text>
-            <CommentForm productId={props.productId} />
-          </div>
+        <div className='flex flex-col gap-32'>
+          <CommentForm productId={props.productId} />
           <div className='flex flex-col gap-12'>
             <Text intent='teritary' uppercase={true} size='secondaryHeader'
             bold={true}>

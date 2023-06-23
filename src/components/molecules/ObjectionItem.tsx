@@ -26,7 +26,7 @@ const ObjectionItem: FC<Props> = (props) => {
   return (
     <div>
       <div
-        className={`objection ${props.index > 0 && 'border-t-2 border-gray-200'} flex flex-row
+        className={`objection ${props.index > 0 && 'border-t-2 border-gray-300'} flex flex-row
         justify-between items py-[1.75rem] hover:cursor-pointer`}
         onClick={() => handleObjClick(props.id)}
       >

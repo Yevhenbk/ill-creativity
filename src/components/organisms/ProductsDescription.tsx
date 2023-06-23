@@ -35,7 +35,7 @@ const ProductsDescription: FC<Props> = ({}) => {
           <ul className='flex flex-col gap-5'>
             {benefits.map((item: BenefitsProps) => (
               <li className='flex flex-row items-center gap-3'>
-                <AiFillCheckCircle className='text-xl text-green-500' />
+                <AiFillCheckCircle className='text-xl text-[#F4AE4F]' />
                 <Text intent='teritary' size='extralarge'>
                   {item.benefit}
                 </Text>

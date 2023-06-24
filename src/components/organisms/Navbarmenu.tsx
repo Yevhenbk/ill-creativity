@@ -102,7 +102,7 @@ const Navbarmenu: FC<Props> = ({}) => {
       <div className='bg-black h-[2.4rem] flex justify-center items-center
       relative top-20 z-10'>
         <Text intent='primary' size='extrasmall'>
-          <p>Free shipping over €100</p>
+          <p>Free shipping</p>
         </Text>
       </div>
     </>

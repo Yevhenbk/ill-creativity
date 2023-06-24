@@ -10,7 +10,7 @@ interface Props {}
 
 const AddCart: FC<Props> = ({}) => {
 
-  const { cartItems } = useContext(Context)
+  const { cartItems, calculateTotalPrice } = useContext(Context)
 
   return (
     <div className='py-16 overflow-hidden flex flex-col items-center 
@@ -27,13 +27,23 @@ const AddCart: FC<Props> = ({}) => {
           description={item.description} quantity={item.quantity} image={item.image}/>
         )) : <></>}
       </div>
-      <div className='w-[35rem] flex items-center justify-center pt-20'>
+      {cartItems.length !== 0 ?
+      <div className='w-[35rem] flex flex-col items-center justify-center pt-20
+      gap-8 max-[800px]:w-[20rem]'>
+        <Text intent='teritary' size='large' bold={true}>
+          <p>
+            Total price: {calculateTotalPrice()}$
+          </p>
+        </Text>
         <Button intent='primary' fullWidth={true}>
           <Text intent='quinary' size='large' uppercase={true}>
             Checkout  
           </Text>  
         </Button>  
       </div>    
+      : <Text intent='teritary' size='large'>
+          <p className='py-20'>( The Cart is empty )</p>
+        </Text>}
     </div>
   )
 }

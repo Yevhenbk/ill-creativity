@@ -15,14 +15,22 @@ interface Props {
 
 const CartItem: FC<Props> = (props) => {
 
+  const { cartItems, setCartItems } = useContext(Context)
+
+  const removeFromCart = () => {
+    const updatedCartItems = cartItems.filter((item: any) => item.title !== props.title);
+    setCartItems(updatedCartItems);
+  }
+
   return (
     <div className='w-[35rem] border-2 border-gray-300 p-2
-    rounded-lg flex justify-between items-end'>
-      <div className='flex gap-5'>
+    rounded-lg flex justify-between items-end max-[800px]:w-[20rem]
+    max-[800px]:flex-col relative'>
+      <div className='flex gap-5 max-[800px]:flex-col'>
         <img src={props.image} alt=''  className='h-[5rem] w-[5rem]
-        rounded-lg'/>
-        <div className='flex flex-col justify-between'>
-        <Text intent='teritary' uppercase={true} size='medium'
+        rounded-lg max-[800px]:h-[12rem] max-[800px]:w-[20rem] object-cover'/>
+        <div className='flex flex-col justify-between max-[800px]:w-[10rem]'>
+          <Text intent='teritary' uppercase={true} size='medium'
           bold={true}>
             {props.title}
           </Text>
@@ -35,13 +43,14 @@ const CartItem: FC<Props> = (props) => {
           </Text>
         </div>
       </div>
-      <div className='w-[8rem]'>
+      <div className='w-[8rem] max-[800px]:absolute max-[800px]:bottom-2'>
         <Text intent='teritary' size='small'>
           <p className='mb-[.75rem]'>
             Quantity: {props.quantity}
           </p>
         </Text>
-        <Button intent='cartItem' fullWidth={false}>
+        <Button intent='cartItem' fullWidth={false}
+        onClick={removeFromCart}>
           <Text intent='quinary' size='extrasmall'>
             Remove Item
           </Text>

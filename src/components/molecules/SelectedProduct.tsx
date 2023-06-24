@@ -34,7 +34,7 @@ const SelectedProduct: FC<Props> = (props) => {
             {props.price}
           </Text>
         </div>
-        <Link href={`/shop/${props.productId}`} className='pr-2'>
+        <Link href={`/shop/${props.productId}`} className='ml-2'>
           <Button intent='teritary' fullWidth={false}>
             <Text intent='quinary' uppercase={true} size='extrasmall'>
               Buy Now

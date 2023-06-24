@@ -1,4 +1,6 @@
-import React, { FC } from 'react'
+'use client'
+
+import React, { FC, useEffect } from 'react'
 import Text from '@atoms/Text'
 import Button from '@molecules/Button'
 import { 
@@ -8,7 +10,37 @@ import {
 interface Props {}
 
 const Footer: FC<Props> = ({}) => {
+
+  const handleScroll = () => {
+    const scrollTop = window.pageYOffset;
+  }
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
+  // Attach scroll event listener when the component mounts
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
+    <>
+    <button
+      className='flex justify-center items-center w-[100%]
+      py-4 overflow-hidden bg-[#F4AE4F] border-t-2 border-black
+      transition duration-300 transform ease-out'
+      onClick={scrollToTop}
+    >
+      <Text intent='quinary' uppercase={true} size='medium'>
+        Scroll To Top
+      </Text>
+    </button>
     <div className='bg-black h-[25rem] flex flex-row
     justify-around items-center max-[950px]:h-auto
     max-[950px]:py-12'>
@@ -69,6 +101,7 @@ const Footer: FC<Props> = ({}) => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

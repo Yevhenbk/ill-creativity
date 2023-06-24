@@ -22,6 +22,8 @@ const Navbarmenu: FC<Props> = ({}) => {
 
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
 
+  const itemCount = cartItems.length
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   }
@@ -59,7 +61,10 @@ const Navbarmenu: FC<Props> = ({}) => {
           <Link href='/cart' className='flex relative'>
             <AiOutlineShopping className='text-[1.75rem] text-white hover:cursor-pointer' />
             {cartItems.length !== 0 ? 
-              <div className='absolute w-2 h-2 rounded-full bg-[#F4AE4F]' /> 
+              <div className='absolute w-4 h-4 rounded-full bg-[#F4AE4F] text-black
+              flex items-center justify-center text-xs -bottom-1 -left-1'>
+                {itemCount}
+              </div> 
             : <></>}
           </Link>
         </div>

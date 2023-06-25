@@ -3,8 +3,6 @@ import { AiFillCheckCircle } from 'react-icons/ai'
 import Text from '@atoms/Text'
 import { 
   benefits, Props as BenefitsProps } from '@utils/Benefits'
-import Image from 'next/image'
-import noimage from '../../../public/noimage.jpg'
 
 interface Props {}
 
@@ -13,7 +11,7 @@ const ProductsDescription: FC<Props> = ({}) => {
     <div className='h-[40rem] flex flex-row justify-around
     items-center relative max-[800px]:items-center max-[800px]:flex-col-reverse
     max-[800px]:justify-between max-[800px]:h-[65rem]'>
-      <Image src={noimage} alt='Product' className='w-[45vw]
+      <img src='https://ae01.alicdn.com/kf/Sa6fb69231f834181b1d03baaaadb9405M.jpg_640x640Q90.jpg_.webp' alt='Product' className='w-[45vw]
       h-[40rem] object-cover max-[800px]:h-[20rem] max-[800px]:w-[100%]' />
       <div className='w-[50rem] flex flex-col items-center
       max-[800px]:w-[20rem] max-[800px]:left-[2rem]

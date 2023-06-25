@@ -28,7 +28,7 @@ const CheckoutForm = () => {
     <div>
       <label htmlFor='email'>
         <Text intent='teritary' size='large'>
-          Email:
+          Your Email:
         </Text>  
       </label>
       <input

@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 import Link from 'next/link'
 import Text from '@atoms/Text'
 import Button from '@molecules/Button'
+import UncontrolledExample from './Carousel'
 import Image from 'next/image'
 import noimage from '../../../public/noimage.jpg'
 
@@ -36,11 +37,7 @@ const Slider: FC<Props> = () => {
           </Link>
         </div>
       </div>  
-      <div className='w-[50vw] h-[45rem] max-[1200px]:w-[100%] max-[1200px]:h-[25rem]
-      max-[1200px]:flex max-[1200px]:justify-content max-[1200px]:items-center  max-[1200px]:overflow-hidden'>
-        <Image src={noimage} alt='noimage' className='w-[100%] h-[100%] 
-        object-cover max-[1200px]:h-[25rem]' />
-      </div>  
+      <UncontrolledExample />
     </div>
   )
 }

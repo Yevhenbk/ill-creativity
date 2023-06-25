@@ -35,6 +35,12 @@ body {
   height: auto;
 }
 
+button:disabled {
+  /* Add your disabled button styles here */
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 
 
 

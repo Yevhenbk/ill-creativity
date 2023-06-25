@@ -2,6 +2,7 @@
 
 import React, { FC, useContext } from 'react'
 import Link from 'next/link'
+import CheckoutForm from './CheckoutForm'
 import Text from '@atoms/Text'
 import CartItem from '@molecules/CartItem'
 import Button from '@molecules/Button'
@@ -70,11 +71,7 @@ const AddCart: FC<Props> = ({}) => {
             Total price: {calculateTotalPrice()}$
           </p>
         </Text>
-        <Button intent='primary' fullWidth={true}>
-          <Text intent='quinary' size='large' uppercase={true}>
-            Checkout  
-          </Text>  
-        </Button>  
+        <CheckoutForm />
       </div>    
       : <Text intent='teritary' size='large'>
           <p className='pb-32 pt-16'>(Your cart is empty)</p>

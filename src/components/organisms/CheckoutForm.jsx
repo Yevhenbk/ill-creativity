@@ -15,7 +15,7 @@ const CheckoutForm = () => {
 
   const handlePayment = async (token) => {
     try {
-      const response = await axios.post('https://formspree.io/f/xayzrgba', { 
+      const response = await axios.post('https://formspree.io/f/xeqbjepe', { 
         cartItems,
         email
       })

@@ -26,15 +26,17 @@ const ProductsDescription: FC<Props> = ({}) => {
           </Text>
           <Text intent='teritary' size='extralarge'>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Nulla itaque porro nostrum aliquid modi obcaecati consectetur.
+              Experience the magic of Illuminatingcreativity and let your home 
+              become a testament to your unique style and impeccable taste. Explore 
+              our collection today and embark on a journey of transformation and 
+              inspiration.
             </p>  
           </Text>
           <ul className='flex flex-col gap-5'>
             {benefits.map((item: BenefitsProps) => (
               <li className='flex flex-row items-center gap-3'>
                 <AiFillCheckCircle className='text-xl text-[#F4AE4F]' />
-                <Text intent='teritary' size='extralarge'>
+                <Text intent='teritary' size='extralarge' italic={true}>
                   {item.benefit}
                 </Text>
               </li>

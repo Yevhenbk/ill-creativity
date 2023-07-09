@@ -52,10 +52,10 @@ const Navbarmenu: FC<Props> = ({}) => {
         </div> 
         <div className='flex flex-row justify-around
         w-[15rem] items-center max-[700px]:hidden max-[700px]:w-auto'>
-          <Link href='/support'>
+          <Link href='/shipping'>
             <Text intent='secondary' size='extrasmall'>
               <p className='hover:text-white duration-150
-              underline-on-hover'>Support</p>
+              underline-on-hover'>Shipping</p>
             </Text>
           </Link>
           <Link href='/cart' className='flex relative'>
@@ -87,9 +87,9 @@ const Navbarmenu: FC<Props> = ({}) => {
               <AiOutlineLeft className='text-xl' />
             </Link>
           ))}
-          <Link href='/support' className='text-right w-[70%] mt-12'>
+          <Link href='/shipping' className='text-right w-[70%] mt-12'>
             <Text intent='teritary' size='small' uppercase={true}>
-              <p>Support</p>
+              <p>Shipping</p>
             </Text>
           </Link>
           <div className='w-[70%] flex flex-col items-end text-black gap-5 pt-6'>

@@ -17,7 +17,7 @@ const Testimonials: FC<Props> = ({}) => {
           <h3>What do they say about us?</h3>
         </Text>
         <Text intent='teritary' size='large'>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          <p>Get to know one of our dearest customers and see their reviews.</p>
         </Text>
       </div>
       <div className='h-[40rem] flex max-[1270px]:py-[4rem]

@@ -38,10 +38,9 @@ const TestimonialCard: FC<Props> = (props) => {
               <AiFillStar />
             </div>
           </div>
-          <Link href=''>
-            <IoMdShareAlt className='text-3xl text-black
-            hover:text-[#4128be]' />
-          </Link>  
+          <Text intent='teritary' size='secondaryHeader' bold={true}>
+            <h2>5.0</h2>  
+          </Text> 
         </div>
       </div>
     </div>

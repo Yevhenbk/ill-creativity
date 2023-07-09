@@ -41,7 +41,7 @@ const CheckoutForm = () => {
       />
       <StripeCheckout
         token={handlePayment}
-        stripeKey='pk_test_51NMpifESp2Pfj6a7QlxmiM1Kw5dPDCWA62T6687GQBZf2j5ERRedTIovcJpfs3oBdNZanyBeCa2dhzwcJVH06Lgb00A7cu390l'
+        stripeKey='pk_live_51MwLwZC3QkyPkbZAFZhrkOOZ3oxUamiEXIQ8loiAjoZJecvtys5vrxzTBNcUI1aquvt4NWkTwFNL3U5uwelkdOa000vHwOnK2B'
         amount={totalPrice.replace('.', '')} // Example: Amount in cents
         currency='USD' // Example: Currency
         shippingAddress={true}

@@ -3,9 +3,9 @@
 import React, { FC, useEffect } from 'react'
 import Text from '@atoms/Text'
 import Button from '@molecules/Button'
+import Link from 'next/link'
 import { 
-  AiOutlineRight, AiOutlineInstagram, AiOutlineFacebook,
-  AiOutlineTwitter } from 'react-icons/ai'
+  AiOutlineRight, AiOutlineInstagram, AiOutlineFacebook } from 'react-icons/ai'
 
 interface Props {}
 
@@ -53,30 +53,16 @@ const Footer: FC<Props> = ({}) => {
         </Text>
         <div className='flex flex-col gap-4'>
           <Text intent='primary' size='medium' uppercase={true}>
-            <p className='pb-2'>First column</p>
+            <p className='pb-2'>Office</p>
           </Text>
           <Text intent='secondary' size='small'>
-            <p>First page</p>
+            <p>High Street North East Ham</p>
           </Text>
           <Text intent='secondary' size='small'>
-            <p>Second page</p>
+            <p>London, United Kingdom EMA 2JA</p>
           </Text>
           <Text intent='secondary' size='small'>
-            <p>Third page</p>
-          </Text>
-        </div>
-        <div className='flex flex-col gap-4'>
-          <Text intent='primary' size='medium' uppercase={true}>
-            <p className='pb-2'>Second column</p>
-          </Text>
-          <Text intent='secondary' size='small'>
-            <p>First page</p>
-          </Text>
-          <Text intent='secondary' size='small'>
-            <p>Second page</p>
-          </Text>
-          <Text intent='secondary' size='small'>
-            <p>Third page</p>
+            <p>6733 182-184</p>
           </Text>
         </div>
         <div className='flex flex-col gap-4'>
@@ -91,12 +77,14 @@ const Footer: FC<Props> = ({}) => {
           </Button>
           <div className='flex justify-left items-center
           text-[#909090] text-2xl gap-6 pt-2'>
-            <AiOutlineFacebook className='hover:cursor-pointer
-            hover:text-white' />
-            <AiOutlineInstagram className='hover:cursor-pointer
-            hover:text-white' />
-            <AiOutlineTwitter className='hover:cursor-pointer
-            hover:text-white' />
+            <Link href=''>
+              <AiOutlineFacebook className='hover:cursor-pointer
+              hover:text-white' />
+            </Link>
+            <Link href=''>
+              <AiOutlineInstagram className='hover:cursor-pointer
+              hover:text-white' />
+            </Link> 
           </div>
         </div>
       </div>
